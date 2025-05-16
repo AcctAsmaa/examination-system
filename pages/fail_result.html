@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Over</title>
+  <link rel="stylesheet" href="../css/fail_result.css">
+</head>
+
+<body>
+
+  <div class="message">
+    <h1 id="result-heading">Unfortunately, the lion caught the gazelle! 😢</h1>
+    <p id="score-percentage" style="font-size: 1.5rem; font-weight: bold;"></p>
+    <p>You couldn’t save her this time. Try again to be the hero next time.</p>
+  </div>
+
+  <div class="scene">
+    <img src="../img/88.png" alt="Gazelle" class="gazelle" id="gazelle">
+    <img src="../img/lion.png!bw700" alt="Lion" class="lion" id="lion">
+  </div>
+
+  <button class="retry-btn" onclick="location.href='home.html'">Try Again </button>
+
+  <audio id="lionRoar" src="../sounds/EcIuCqwSyKk.mp3" preload="auto"></audio>
+
+  <script src="../scripts/fail-result.js">
+  </script>
+
+</body>
+
+</html>

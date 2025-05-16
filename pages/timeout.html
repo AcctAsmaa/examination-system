@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Time Out</title>
+    <style>
+        body {
+            background-image: url('../img/as.PNG');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #b30000;
+            text-align: center;
+            font-family: Arial;
+            padding: 100px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            padding: 30px 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            display: block;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInScale 1s ease forwards;
+            opacity: 0;
+            transform: scale(0.8);
+            margin-left: 400px
+        }
+
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        button {
+            width: 100%;
+            height: 45px;
+            background: #0e2512;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #ffffff;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                margin: auto;
+                padding: 20px;
+            }
+
+            body {
+                padding: 50px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>⏰ Time's Up!</h1>
+        <img width="200px" src="../img/4555.jpg">
+        
+        <p>Your score: <span id="score"></span></p>
+        <p>Answered questions: <span id="answered"></span></p>
+        
+        
+        <button onclick="location.href='home.html'">Retry Quiz</button>
+    </div>
+
+    <script>
+        let score = localStorage.getItem('userScore');
+        let totalQuestions = localStorage.getItem('totalQuestions');
+        let selectedAnswers = JSON.parse(localStorage.getItem('selectedAnswers')) || {};
+
+       
+        document.getElementById('score').textContent = score ? score : 'N/A';
+        document.getElementById('answered').textContent = `${Object.keys(selectedAnswers).length} / ${totalQuestions} answered`;
+
+       
+    </script>
+</body>
+
+</html>

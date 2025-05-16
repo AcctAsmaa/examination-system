@@ -1,0 +1,53 @@
+[
+    {
+      "question": "What is the largest land carnivore?",
+      "choices": ["Lion", "Grizzly Bear", "Polar Bear", "Tiger"],
+      "answer": 2
+    },
+    {
+      "question": "Which wild cat is the fastest land animal?",
+      "choices": ["Cheetah", "Leopard", "Jaguar", "Cougar"],
+      "answer": 0
+    },
+    {
+      "question": "Which animal is known as the king of the jungle?",
+      "choices": ["Elephant", "Tiger", "Lion", "Gorilla"],
+      "answer": 2
+    },
+    {
+      "question": "Which wild animal has the longest neck?",
+      "choices": ["Ostrich", "Elephant", "Camel", "Giraffe"],
+      "answer": 3
+    },
+    {
+      "question": "What animal is famous for its black and white stripes?",
+      "choices": ["Zebra", "Tiger", "Skunk", "Panda"],
+      "answer": 0
+    },
+    {
+      "question": "Which wild animal can be found in the Arctic?",
+      "choices": ["Penguin", "Polar Bear", "Camel", "Crocodile"],
+      "answer": 1
+    },
+    {
+      "question": "What is the largest species of big cat?",
+      "choices": ["Lion", "Jaguar", "Leopard", "Siberian Tiger"],
+      "answer": 3
+    },
+    {
+      "question": "Which animal is known for playing dead when threatened?",
+      "choices": ["Raccoon", "Possum", "Fox", "Badger"],
+      "answer": 1
+    },
+    {
+      "question": "Which African animal is known for its horn and poor eyesight?",
+      "choices": ["Elephant", "Buffalo", "Rhino", "Hippo"],
+      "answer": 2
+    },
+    {
+      "question": "Which nocturnal animal is known for hooting?",
+      "choices": ["Bat", "Owl", "Fox", "Raccoon"],
+      "answer": 1
+    }
+  ]
+  

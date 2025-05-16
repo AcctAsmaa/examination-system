@@ -1,0 +1,37 @@
+[
+    {
+      "question": "Which animal is considered the only truly venomous mammal?",
+      "options": ["Platypus", "Komodo Dragon", "Slow Loris", "Echidna"],
+      "answer": "Platypus"
+    },
+    {
+      "question": "What adaptation allows the Arctic fox to survive extremely cold environments?",
+      "options": [
+        "Hibernation during winter",
+        "High body fat and seasonal coat color change",
+        "Migration to warmer regions",
+        "Ability to photosynthesize"
+      ],
+      "answer": "High body fat and seasonal coat color change"
+    },
+    {
+      "question": "Which of the following species uses echolocation for navigation?",
+      "options": ["Hawk", "Owl", "Bat", "Parrot"],
+      "answer": "Bat"
+    },
+    {
+      "question": "What is the primary function of the Jacobson’s organ in reptiles?",
+      "options": [
+        "Hearing low-frequency sounds",
+        "Detecting light and temperature",
+        "Sensing pheromones and chemical cues",
+        "Regulating body temperature"
+      ],
+      "answer": "Sensing pheromones and chemical cues"
+    },
+    {
+      "question": "Which marine animal has the largest brain relative to body size among invertebrates?",
+      "options": ["Octopus", "Jellyfish", "Crab", "Starfish"],
+      "answer": "Octopus"
+    }
+  ]

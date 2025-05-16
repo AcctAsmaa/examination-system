@@ -1,0 +1,53 @@
+[
+    {
+      "question": "Which animal uses its long trunk to drink water?",
+      "choices": ["Giraffe", "Elephant", "Kangaroo", "Hippo"],
+      "answer": 1
+    },
+    {
+      "question": "Which animal jumps from tree to tree and loves bananas?",
+      "choices": ["Deer", "Monkey", "Fox", "Bear"],
+      "answer": 1
+    },
+    {
+      "question": "What animal is black and white and eats bamboo?",
+      "choices": ["Skunk", "Panda", "Raccoon", "Koala"],
+      "answer": 1
+    },
+    {
+      "question": "Which animal is the tallest in the forest?",
+      "choices": ["Elephant", "Giraffe", "Tiger", "Horse"],
+      "answer": 1
+    },
+    {
+      "question": "Which animal has sharp quills for protection?",
+      "choices": ["Hedgehog", "Squirrel", "Porcupine", "Beaver"],
+      "answer": 2
+    },
+    {
+      "question": "Which animal is famous for building dams and lodges?",
+      "choices": ["Otter", "Beaver", "Moose", "Frog"],
+      "answer": 1
+    },
+    {
+      "question": "Which forest animal is known for its cleverness and red fur?",
+      "choices": ["Wolf", "Fox", "Deer", "Squirrel"],
+      "answer": 1
+    },
+    {
+      "question": "Which bird lives in the forest and is active at night?",
+      "choices": ["Parrot", "Eagle", "Owl", "Swan"],
+      "answer": 2
+    },
+    {
+      "question": "Which small animal stores nuts for winter?",
+      "choices": ["Rabbit", "Beaver", "Squirrel", "Raccoon"],
+      "answer": 2
+    },
+    {
+      "question": "Which animal hops and carries its baby in a pouch?",
+      "choices": ["Deer", "Kangaroo", "Monkey", "Dog"],
+      "answer": 1
+    }
+  ]
+  

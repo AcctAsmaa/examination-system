@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exam</title>
+  <link rel="stylesheet" href="../css/exam.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <section id="joinUs">
+    <div class="exam-container">
+      <div class="exam-header">
+        <div class="theme-toggle">
+          <input type="checkbox" id="switch" />
+          <label for="switch">☀️</label>
+        </div>
+
+
+
+        <h2>Welcome, <span id="userName"></span>!</h2>
+
+        <h3 class="section-title"> Exam Started</h3>
+        <div id="timer">10:00</div>
+      </div>
+
+
+
+      <div id="questionProgressText" class="progress-text">Question 1 from 10</div>
+      <div class="progress-container2">
+        <div class="progress-bar2" id="progressBar2"></div>
+      </div>
+
+
+
+      <div id="questionCard" class="question-card animate"></div>
+      <div id="markedPopup" class="marked-popup hidden">
+        <h4>⭐ Marked Questions</h4>
+        <div id="markedQuestions"></div>
+      </div>
+
+      <div class="exam-actions">
+
+
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="exam-actions">
+
+          <button id="prevQuestion" disabled>⬅️ Previous</button>
+          <button id="markReview">⭐ Mark for Review</button>
+
+          <button id="nextQuestion">Next ➡️</button>
+          <button id="submitExam" class="hidden">✅ Submit</button>
+        </div>
+      </div>
+
+      <div id="popup" class="popup hidden">
+        <div class="popup-content">
+          <p>Question marked for review!</p>
+          <button onclick="closePopup()">OK</button>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="background-animation">
+      <img id="deer" width="150px" src="../img/88.png" alt="gazelle" />
+    </div>
+
+    <div class="background">
+      <img id="lion" width="220px" src="../img/lion.png!bw700" alt="lion" />
+    </div>
+
+
+
+    <script src="../scripts/intermediate.js"></script>
+
+  </section>
+</body>
+
+</html>

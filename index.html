@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Start Your Test & Sign Up Now!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+
+  <div class="signup-container">
+    <h1>Let's Start journey!<br><span>Sign Up Now</span></h1>
+    <form id="signupForm" novalidate>
+      <input type="text" id="firstName" placeholder="First Name" required>
+      <p id="firstNameError" class="error-message"></p>
+
+      <input type="text" id="lastName" placeholder="Last Name" required>
+      <p id="lastNameError" class="error-message"></p>
+
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="Password" required>
+        <span class="toggle-password hidden" onclick="togglePassword('password', this)">👁️</span>
+      </div>
+      <p id="passwordError" class="error-message"></p>
+
+      <div class="password-wrapper">
+        <input type="password" id="verifyPassword" placeholder="Confirm Password" required>
+        <span class="toggle-password hidden" onclick="togglePassword('verifyPassword', this)">👁️</span>
+      </div>
+      <p id="verifyPasswordError" class="error-message"></p>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <div class="animated-objects">
+    <img src="img/88.png" class="left-img" alt="Left Moving Image">
+    <img src="img/i - Copy.png" class="right-img" alt="Right Moving Image">
+  </div>
+
+  <script src="scripts/signup.js">
+  </script>
+
+</body>
+
+</html>

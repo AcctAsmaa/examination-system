@@ -1,0 +1,407 @@
+:root {
+  --bg-color: rgba(255, 255, 255, 0.2);
+  --text-color: #000;
+  --card-color: rgba(255, 255, 255, 0.2);
+  --button-bg: linear-gradient(to right, #25fc98, #074420);
+  --button-hover: linear-gradient(to right, #074420, #25fc98);
+}
+
+[data-theme="dark"] {
+  --bg-color: rgba(0, 0, 0, 0.6);
+  --text-color: #fff;
+  --card-color: rgba(91, 109, 100, 0.7);
+  --button-bg: linear-gradient(to right, #0f2027, #2c5364);
+  --button-hover: linear-gradient(to right, #2c5364, #0f2027);
+  background-color: #121212;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../img/as.PNG') no-repeat;
+  background-size: cover;
+}
+
+.exam-container {
+  width: 600px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1s ease;
+}
+
+.exam-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+#timer {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff4b5c;
+}
+
+.question-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  min-height: 200px;
+  animation: fadeSlide 0.5s ease;
+
+}
+
+.exam-actions {
+  justify-content: space-around;
+  margin: 50px;
+}
+
+.exam-actions button {
+  background: #6a11cb;
+  background: linear-gradient(to right, #25fc98, #074420);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
+.exam-actions button:hover {
+  background: linear-gradient(to right, #074420, #25fc98);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.marked-popup {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  background: #fff9c4;
+  border: 2px solid #fbc02d;
+  padding: 1px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100px;
+  z-index: 1000;
+}
+
+#markedQuestions button {
+  background-color: #ffe082;
+  border: none;
+  margin: 5px 1px;
+  padding: 3px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#markedQuestions button:hover {
+  background-color: #ffd54f;
+}
+
+
+
+@keyframes popShake {
+  0% {
+    transform: scale(0.95) rotate(0deg);
+  }
+
+  25% {
+    transform: scale(1.05) rotate(2deg);
+  }
+
+  50% {
+    transform: scale(1) rotate(-2deg);
+  }
+
+  75% {
+    transform: scale(1.02) rotate(1deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.pop-shake {
+  animation: popShake 0.5s ease;
+}
+
+h4 {
+  margin: 0px;
+}
+
+
+
+
+.progress-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #4caf50;
+  transition: width 0.4s ease;
+}
+
+@media screen and (max-width:700px) {
+  .exam-container {
+    width: 90%;
+    margin: 20px auto;
+    position: static;
+    font-size: 14px;
+  }
+
+  .marked-popup {
+
+
+    right: 35px;
+
+  }
+
+  #deer,
+  #lion {
+    display: none;
+    animation: none !important;
+  }
+
+  .exam-actions button {
+    background: linear-gradient(to right, #25fc98, #074420);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    width: 90px;
+
+
+  }
+
+  #timer {
+    font-size: 16px;
+  }
+
+  .marked-popup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80px;
+    height: 50px;
+    margin-right: -15px;
+    margin-top: 500px;
+    gap: 0px;
+  }
+
+}
+
+#deer {
+  position: absolute;
+  right: -150px;
+  bottom: 80px;
+  width: 150px;
+  animation: moveDeer 5s ease-out forwards, bounce 1s infinite;
+}
+
+#lion {
+  position: absolute;
+  right: -300px;
+  bottom: 80px;
+  width: 220px;
+  z-index: 1;
+  animation: moveLion 7s ease forwards, bounce 2s;
+  ;
+  animation-delay: 2s;
+}
+
+@keyframes moveDeer {
+  0% {
+    right: -300px;
+  }
+
+  100% {
+    right: 72%;
+  }
+
+}
+
+@keyframes moveLion {
+  0% {
+    right: -150px;
+  }
+
+  100% {
+    right: 13%;
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+.question-nav {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 120px;
+  padding: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.question-nav button {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 6px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.question-nav button.active {
+  background: #007bff;
+  color: white;
+}
+
+
+
+
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle label {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #e0601a;
+}
+
+#switch {
+  display: none;
+}
+
+
+
+
+
+
+.exam-container,
+.question-card {
+  background-color: var(--card-color);
+}
+
+.exam-actions button {
+  background: var(--button-bg);
+}
+
+.exam-actions button:hover {
+  background: var(--button-hover);
+}
+
+
+
+
+
+button:disabled {
+  background-color: #141414 !important;
+  color: #464343 !important;
+  opacity: 0.2;
+  cursor: not-allowed;
+  box-shadow: none;
+}

@@ -1,0 +1,165 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('../img/as.PNG') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.message {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 25px 35px;
+  border-radius: 15px;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.message h1 {
+  font-size: 2.2rem;
+  color: #ff4e4e;
+  margin-bottom: 15px;
+}
+
+.message p {
+  font-size: 1.2rem;
+  color: #eee;
+  margin: 10px 0;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 280px;
+  margin-top: auto;
+  margin-bottom: 60px;
+}
+
+.gazelle {
+  position: absolute;
+  left: 100px;
+  bottom: 0;
+  width: 140px;
+  z-index: 2;
+  transition: opacity 2s ease-in-out;
+}
+
+.lion {
+  position: absolute;
+  right: -250px;
+  bottom: 0;
+  width: 200px;
+  z-index: 3;
+  animation: lionWalk 6s ease-in-out forwards;
+}
+
+@keyframes lionWalk {
+  0% {
+    right: -250px;
+  }
+
+  100% {
+    right: 660px;
+  }
+}
+
+.retry-btn {
+  margin-top: 10px;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  background-color: #d85d20;
+  color: #fdfdfd;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.retry-btn:hover {
+  background-color: #ffa500;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .message h1 {
+    font-size: 1.8rem;
+  }
+
+  .message p {
+    font-size: 1rem;
+  }
+
+  .lion {
+    width: 120px;
+  }
+
+  .gazelle {
+    width: 90px;
+    left: 60px;
+  }
+
+  .scene {
+    height: 220px;
+  }
+
+  @keyframes lionWalk {
+    0% {
+      right: -250px;
+    }
+
+    100% {
+      right: 100px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .message {
+    padding: 20px;
+  }
+
+  .message h1 {
+    font-size: 1.5rem;
+  }
+
+  .retry-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  @keyframes lionWalk {
+    0% {
+      right: -250px;
+    }
+
+    100% {
+      right: 220px;
+    }
+  }
+}

@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #333;
+  user-select: none;
+}
+
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../img/as.PNG') no-repeat center center/cover;
+  font-family: sans-serif;
+  padding: 20px;
+  position: relative;
+}
+
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 30px 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInScale 1s ease forwards;
+  opacity: 0;
+  transform: scale(0.8);
+  color: #e0601a;
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.form-box {
+  width: 100%;
+  padding: 40px;
+  color: #e0601a;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e0601a;
+}
+
+input {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: rgba(150, 196, 171, 0.9);
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  color: #e0601a;
+}
+
+button {
+  width: 100%;
+  height: 45px;
+  background: #0e2512;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #e0601a;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+
+
+
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.shake {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.background-animation {
+  width: 400px;
+  left: 50px;
+  bottom: 10px;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 2;
+}
+
+.background-animation img {
+  position: absolute;
+  bottom: 10px;
+  left: 400px;
+  mix-blend-mode: multiply;
+  animation: car 3s ease forwards;
+}
+
+.background img {
+  right: 100px;
+  position: absolute;
+  animation: star 2s ease forwards;
+}
+
+.background {
+  position: absolute;
+
+  right: 100px;
+  top: 450px;
+
+}
+
+@keyframes car {
+  100% {
+    transform: translatex(80px);
+  }
+
+  50% {
+    transform: translateX(80px);
+  }
+
+  0% {
+    transform: translatex(-80px);
+  }
+
+}
+
+@keyframes star {
+  100% {
+    transform: translatex(-60px);
+  }
+
+  50% {
+    transform: translateX(-60px);
+  }
+
+  0% {
+    transform: translatex(60px);
+  }
+
+}
+
+@media (max-width: 600px) {
+  .form-box {
+    padding: 20px;
+  }
+
+  .toggle-password {
+    right: 30px;
+    top: 47%;
+  }
+
+  .background-animation img,
+  .background img {
+    display: flex;
+    bottom: 80px;
+
+  }
+
+  .background img {
+    display: flex;
+    bottom: 80px;
+
+  }
+
+  @keyframes car {
+    100% {
+      transform: translatex(-150px);
+    }
+
+    50% {
+      transform: translateX(-150px);
+    }
+
+    0% {
+      transform: translatex(-250px);
+    }
+
+  }
+
+  @keyframes star {
+    100% {
+      transform: translatex(-90px);
+    }
+
+    50% {
+      transform: translateX(-90px);
+    }
+
+    0% {
+      transform: translatex(400px);
+    }
+
+  }
+}
+
+.animated-objects {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.animated-objects .left-img {
+  width: 120px;
+  animation: moveRight 6s linear infinite;
+}
+
+.animated-objects .right-img {
+  width: 120px;
+  animation: moveLeft 6s linear infinite;
+}
+
+
+@media (max-width: 600px) {
+  .animated-objects {
+    display: none;
+  }
+}
+
+.animated-objects {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 0;
+  padding: 0 20px;
+}
+
+
+.animated-objects .left-img {
+  width: 120px;
+  animation: floatRight 6s ease-in-out infinite;
+}
+
+
+.animated-objects .right-img {
+  width: 120px;
+  animation: floatLeft 6s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+@media (max-width: 600px) {
+  .animated-objects {
+    display: none;
+  }
+}

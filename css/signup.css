@@ -161,3 +161,16 @@ button {
 .hidden {
   display: none;
 }
+
+@media (max-width: 800px) {
+  
+
+  .signup-container {
+    width: 70%;
+    padding: 30px 20px;
+  }
+}
+
+.hidden {
+  display: none;
+}

@@ -2,11 +2,15 @@ const signupForm = document.getElementById('signupForm');
 
 const firstNameInput = document.getElementById('firstName');
 const lastNameInput = document.getElementById('lastName');
+const emailInput = document.getElementById('email');
+
 const passwordInput = document.getElementById('password');
 const verifyPasswordInput = document.getElementById('verifyPassword');
 
 const firstNameError = document.getElementById('firstNameError');
 const lastNameError = document.getElementById('lastNameError');
+const emailError = document.getElementById('emailError');
+
 const passwordError = document.getElementById('passwordError');
 const verifyPasswordError = document.getElementById('verifyPasswordError');
 
@@ -15,6 +19,8 @@ signupForm.addEventListener('submit', function (e) {
 
   const firstName = firstNameInput.value.trim();
   const lastName = lastNameInput.value.trim();
+    const email = emailInput.value;
+
   const password = passwordInput.value;
   const verifyPassword = verifyPasswordInput.value;
 
@@ -27,10 +33,18 @@ signupForm.addEventListener('submit', function (e) {
 
   const nameRegex = /^[A-Za-z]{3,10}$/;
   const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,20}$/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
 
   if (!nameRegex.test(firstName)) {
     firstNameError.textContent = 'First name must be at least 3 letters.';
     firstNameInput.value = '';
+    valid = false;
+  }
+
+if (!emailRegex.test(email)) {
+    emailError.textContent = 'The email  is invalid. Please try again.';
+    emailInput.value = '';
     valid = false;
   }
 
@@ -60,7 +74,7 @@ signupForm.addEventListener('submit', function (e) {
     };
 
     localStorage.setItem('examUser', JSON.stringify(userData));
-window.location.href = '/exam-system/pages/login.html';
+window.location.href = '/examination-system/pages/login.html';
   }
 });
 

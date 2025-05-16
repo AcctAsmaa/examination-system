@@ -2,61 +2,80 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced</title>
-    <link rel="stylesheet" href="../css/advanced.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exam</title>
+  <link rel="stylesheet" href="../css/exam.css">
+  <style>
+
+  </style>
 </head>
 
 <body>
-    <div class="theme-toggle">
-        <input type="checkbox" id="switch">
-        <label for="switch"> &#127774; / &#127761; </label>
-        <div class="hero">
-            <div class="quiz-container">
-                <div id="quiz">
-                    <div id="question-number">Question 1</div>
-                    <div id="question">question text</div>
-                    <div class="options" id="options-container">
-                        <label><input type="radio" class="option" value="option1"> option1</label>
-                        <label><input type="radio" class="option" value="option2"> option2</label>
-                        <label><input type="radio" class="option" value="option3"> option3</label>
-                        <label><input type="radio" class="option" value="option4"> option4</label>
-                    </div>
-                    <div class="footer">
-                        <button id="prev-btn" class="hide">Previous</button>
-                        <span id="timer">Time left: 10s</span>
-                        <div class="progress-bar-container">
-                            <div id="progress-bar"></div>
-                        </div>
-                        <div id="progress-text">0 / X answered</div>
-
-                        <pre> </pre>
-                        <button id="next-btn" disabled>Next</button>
-                        <button id="submit-btn" class="hide">Submit</button>
-                        <button id="mark-btn">Mark for Review</button>
-                        <div id="marked-questions" style="margin-top: 10px;"></div>
-                        <div id="flags-panel" style="position: fixed; top: 20px; right: 20px; z-index: 999;"></div>
-
-                    </div>
-                </div>
-                <div id="result" class="hide">
-                    <h2>Your Score: <span id="score"></span></h2>
-                </div>
-            </div>
+  <section id="joinUs">
+    <div class="exam-container">
+      <div class="exam-header">
+        <div class="theme-toggle">
+          <input type="checkbox" id="switch" />
+          <label for="switch">☀️</label>
         </div>
+
+        <h2>Welcome, <span id="userName"></span>!</h2>
+
+        <h3 class="section-title"> Exam in progress</h3>
+        <div id="timer">10:00</div>
+      </div>
+
+
+
+      <div id="questionProgressText" class="progress-text">Question 1 from 10</div>
+      <div class="progress-container2">
+        <div class="progress-bar2" id="progressBar2"></div>
+      </div>
+
+      <div id="questionCard" class="question-card animate"></div>
+      <div id="markedPopup" class="marked-popup hidden">
+        <h4>⭐ Marked Questions</h4>
+        <div id="markedQuestions"></div>
+      </div>
+
+      <div class="exam-actions">
+
+
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="exam-actions">
+
+          <button id="prevQuestion" disabled>⬅️ Previous</button>
+          <button id="markReview">⭐ Mark for Review</button>
+
+          <button id="nextQuestion">Next ➡️</button>
+          <button id="submitExam" class="hidden">✅ Submit</button>
+        </div>
+      </div>
+
+      <div id="popup" class="popup hidden">
+        <div class="popup-content">
+          <p>Question marked for review!</p>
+          <button onclick="closePopup()">OK</button>
+        </div>
+      </div>
     </div>
+
     <div class="background-animation">
-        <img width="100px" src="../img/88.png" />
-
+      <img id="deer" width="150px" src="../img/88.png" alt="gazelle" />
     </div>
+
     <div class="background">
-
-        <img width="150px" src="../img/lion.png!bw700"  class="lion" alt="lion">
+      <img id="lion" width="220px" src="../img/lion.png!bw700" alt="lion" />
     </div>
-    <script src="../scripts/advanced.js">
-    </script>
 
+
+    <script src="../scripts/exam.js"></script>
+
+  </section>
 </body>
 
 </html>
